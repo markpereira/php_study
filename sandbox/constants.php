@@ -17,9 +17,10 @@
 		// echo MAX_WIDTH;
 		?>
 
-				<?php // can't even redefine it
+		<?php // can't even redefine it
 		define("MAX_WIDTH", 981);
 		echo MAX_WIDTH;
 		?>
+		<br />
 	</body>
 </html>		
