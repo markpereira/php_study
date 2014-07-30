@@ -10,3 +10,19 @@ key - value pair.
 
 Null and empty:
 - 'Empty' is the leading cause of bugs in PHP code.
+
+Type Juggling and casting
+
+	- String
+	- int, integer
+	- float
+	- array
+	- bool, boolean
+
+	php website has rules around how to use this.
+
+	<?php $count2 = (string) $count; ?><br />
+	=> change takes place as it's being assigned. not a permanent assignment.
+	=> using settype will allow the change of type.
+
+
