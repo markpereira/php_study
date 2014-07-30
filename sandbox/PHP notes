@@ -28,4 +28,8 @@ Type Juggling and casting
 
 Constants
 
-- useful for saving data that's fixed. i.e root location of image files 
+	- useful for saving data that's fixed. i.e root location of image files 
+
+Switch statements
+	
+	- best used for compact logic. i.e. when you know there are a certain amount of things you need to list off, use switch statements.
