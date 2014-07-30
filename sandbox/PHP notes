@@ -26,3 +26,6 @@ Type Juggling and casting
 	=> using settype will allow the change of type.
 
 
+Constants
+
+- useful for saving data that's fixed. i.e root location of image files 
