@@ -45,6 +45,18 @@
 				next($ages);
 			}
 		?>
+		<br />
+		<br />
+		<h3>Students roll check</h3>
+		<br />
+		<?php 
+			$students = array("John", "Sally", "Groucho", "Chico", "Polo", "Lisa", "Lionel");
+
+			while($student = current($students)) {
+				echo $student . ", " . "<br />";
+				next($students);
+			}
+		?>
 
 	</body>
 </html>		
