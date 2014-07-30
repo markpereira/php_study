@@ -40,7 +40,7 @@
 			}
 		?>
 		<br />
-		<?php // loop inside a loop with continue
+		<?php // loop inside a loop using continue
 			
 			for ($i=0; $i<=5; $i++) {
 				if ($i % 2 == 0) { continue(1); }
