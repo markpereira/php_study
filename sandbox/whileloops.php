@@ -18,14 +18,17 @@
 			echo "Count: {$count}";
 		?>
 		<br />
-		Even and Odd.
+		<br />
+
+		<h3>Even and Odd Exercise.</h3>
+		<br />
 		<?php 
 			$count = 0;
 			while ($count <= 10) {
-				if ($count % 2) {
-					echo "<b>{$count}, </b>";
+				if ($count % 2 == 0) {
+					echo "{$count} is even.<br />";
 				} else {
-				echo $count . ", ";	
+				echo "{$count} is odd.<br /> ";	
 				}
 				$count ++; // increment by one
 			}
