@@ -25,5 +25,19 @@
 			better_hello("Bonjour", $name, null);
 
 		?>
+		<br />
+		Mark's test
+		<br />
+		<?php 
+
+			function say_hello($greeting, $name) {
+				echo "{$greeting} World!... My name is {$name}<br />";
+			}
+
+			say_hello("Bonjour", "Mark");
+			say_hello("Hello", "Jane");
+			say_hello("Ciao", "Don");
+
+		?>
 	</body>
 </html>		
