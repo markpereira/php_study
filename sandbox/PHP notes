@@ -1,0 +1,12 @@
+short open tags vs php tags?
+	standard tags to make it portable.
+
+Array
+integer indexed collection of objects.
+
+Associative Array
+object indexed collection of objects.(index by label)
+key - value pair.
+
+Null and empty:
+- 'Empty' is the leading cause of bugs in PHP code.

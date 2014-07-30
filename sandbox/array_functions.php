@@ -10,11 +10,13 @@
 		Max value: 		<?php echo max($numbers); ?><br /> 
 		Min Value:		<?php echo min($numbers); ?><br />
 		<br />
+		
 		<pre>
 		Sort: 				<?php echo sort($numbers); print_r($numbers); ?><br />
 		Reverse Sort:	<?php echo rsort($numbers); print_r($numbers); ?><br />
 		</pre>
 		<br />
+
 		Implode: <?php echo $num_string = implode(" * ", $numbers); ?><br />
 		Explode: <?php print_r(explode(" * ", $num_string)); ?><br />
 		<?php // use implode to turn csv into array ?>
@@ -27,12 +29,14 @@
 		<pre>
 		Values only: <?php print_r(array_values($numbers)); ?><br />
 		</pre>
-
+		<br />
+		
 		<pre>
-		Values only: <?php print_r(array_keys($numbers)); ?><br />
+		Keys only: <?php print_r(array_keys($numbers)); ?><br />
 		</pre>
-
+		<br />
 		<pre>
+		Shuffle:	
 			<?php 
 			shuffle($numbers);
 			foreach ($numbers as $number) {
