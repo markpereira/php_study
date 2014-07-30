@@ -10,8 +10,11 @@
 
 		if ($a > $b) {
 			echo "a is larger than b";
+		} elseif ($a < $b) {
+			echo "a is smaller than b";
+		}	else {
+			echo "a and b are equal";
 		}
-
 		?>
 		<br />
 		<?php // Only Welcome new users
