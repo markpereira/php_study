@@ -33,3 +33,19 @@ Constants
 Switch statements
 	
 	- best used for compact logic. i.e. when you know there are a certain amount of things you need to list off, use switch statements.
+
+For loops, While loops and foreach loops.
+
+	- foreach loops are tailor made for arrays.
+	- use foreach loops for arrays before using other two.
+
+Continue
+
+	used inside the loop to skip the rest of the current iteration and go directly to the condition evaluation that starts the next iteration
+
+
+====
+
+Revise
+
+1. loop inside a loop with continue - continue.php / lesson 045 towards the end
