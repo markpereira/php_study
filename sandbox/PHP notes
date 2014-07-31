@@ -155,7 +155,8 @@ key - value pair.
 
 ==> Super Globals
 	
-				- $_GET
+				- $_GET (any get request will be added to an array within the GET super global)
+				- $_POST
 
 ==> Encoding GET Values
 		urlencode vs rawurlencode
@@ -198,6 +199,15 @@ key - value pair.
 				- header("Location: login.php")	
 				- re-request is a second GET request.
 
+==> Output Buffering
+		- slight performance hit, but pro's outweigh the cons.
+		- two ways to set this
+			- php.ini file - system wide.
+				- set to integer (4096)
+				- check my_phpinfo.php to confirm this is now turned on with value
+			- file by file basis.	 
+				- ob_start() - has to come before any content.
+				- ob_flush()	
 
 ====
 
