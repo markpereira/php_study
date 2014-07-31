@@ -11,10 +11,32 @@
 		?>
 	</pre>
 	<br />
-	<?php 
-		$username = $_POST["username"];
-		$password = $_POST["password"];
+	<?php
+		// detect form submission
+		if (isset($_POST['submit'])) {
+			echo "The form was submitted: ";
+		}
 
+		//set default values
+		if (isset($_POST["username"])){
+			$username = $_POST["username"];	
+		} else {
+			$username = "";
+		}
+		if (isset($_POST["password"])){
+			$password = $_POST["password"];	
+		} else {
+			$password = "";
+		}
+
+		//set default values using ternary operator
+		// boolean_test ? value_if_true : value_if_false
+		$username = isset($_POST['username']) ? $_POST['username'] : "";
+		$password = isset($_POST['password']) ? $_POST['password'] : "";
+
+	?>
+
+	<?php
 		echo "{$username}: {$password}";
 	?>
 	</body>
