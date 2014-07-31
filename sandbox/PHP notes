@@ -169,6 +169,24 @@ key - value pair.
 			- htmlspecialchars()
 			- htmlentities()
 
+==> Including and requiring files
+			-Include		
+				-	Functions
+				- Layout sections
+				- Reusable HTML/PHP code
+				- CSS and Javascript
+
+		- include()
+			- may not or won't error and will carry on processing
+			- things like html footer... etc less important
+		- require()		
+			- will error and stop processing
+			- things like functions
+		- include_once()
+		- require_once()
+	- keeps code well organise whenever needed on a new page.		
+
+
 ====
 
 Revise
