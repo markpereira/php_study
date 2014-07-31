@@ -157,7 +157,12 @@ key - value pair.
 	
 				- $_GET
 
+==> urlencode vs rawurlencode
+			- rawurlencode the path (portion that comes before the '?')
+			- rawurlencode is more compatible generally
+			- newer and later version
 
+			- urlencode is used on the query string (an early standard)
 ====
 
 Revise
