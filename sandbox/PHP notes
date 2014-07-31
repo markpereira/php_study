@@ -45,7 +45,26 @@ Continue
 
 Function return values
 
-	As much as possible try to keep "echo" out of the function, and use "return" instead.
+	As much as possible try to keep "echo" statements out of the function, and use "return" values instead.
+
+Multiple return values.
+	if you have two  return values, use an array to return both values.
+	use "list" to assign array values to variables
+
+// -- example --
+	<?php 
+		function add_subt($val1, $val2) {
+			$add = $val1 + $val2;
+			$subt = $val1 - $val2;
+			return array($add, $subt); 	 <------- array
+		}
+
+		$result_array = add_subt(10,5);
+		echo "Add: " . $result_array[0] . "<br />";
+		echo "Subt: " . $result_array[1] . "<br />";
+	?>
+//	
+	
 
 
 ====
