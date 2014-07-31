@@ -189,6 +189,16 @@ key - value pair.
 ==> Modifying Headers
 		- add to the top of the page so it's the first thing to load.
 		- you only do this when you are doing re-directs
+
+==> Page redirection
+		- 302 redirect
+			-	HTTP 1.1/302 Found
+			- Location: path
+			- Header
+				- header("Location: login.php")	
+				- re-request is a second GET request.
+
+
 ====
 
 Revise
