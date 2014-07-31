@@ -66,9 +66,90 @@ Multiple return values.
 //	
 	
 
+Common Problems & Troubleshooting
+
+	No output at all
+		- try to access an HTML Page
+		- check webserver is running
+		- Then try to access a basic php page
+		- use php info function and check configuration information
+		- make sure display errors is on and configured.
+
+	Typos
+		- mispelled code
+		- missing semicolon at end of line
+		- missing closing braces or closing quotes (especially nesting)
+		- Case sensitive variable names
+		- = vs == (diffrence is "setting" vs "checking")
+
+	Turn on Error Reporting
+		- php.ini file 
+			- display_errors = ON
+			- error_reporting = E_ALL
+
+		- in php code
+			- ini_set ('display_errors turned ON')
+			- error_reporting (E_ALL)	
+
+		- Types of error reporting
+			- 	error_reporting(E_ALL | E_STRICT);
+			- 	use the ~ to omit (E_ALL & E_DEPRECATED);		
+		Full list of all the error codes and predefined constants
+			http://php.net/manual/en/errorfunc.constants.php	
+
+		- Catergory of errors
+			- fatal errors
+				- PHP understood code but coudln't execute it
+				- probably calling undefined class or function	
+			
+			-syntax errors
+				- PHP couldn't understand or process code
+				- typo, missing semicolon etc.
+				- unexpected "something" ... then tells you syntax error, file, line number where it is.	line number is off by 1 line...
+
+			- Warnings
+				- PHP found a problem but was able to recover
+					- maybe tried to divide by zero if you can't and may keep processing further along the code.
+					- no access permissions
+
+			- Notices
+				- PHP offering advice.
+				- bugs
+				- sloppy programming
+				- look at making adjustments
+
+		TURN OFF ERROR REPORTING ON PRODUCTION!!		
+
+			- logs
+				- MAC OSX
+					- logs to /private/var/log/apache2/error_log
+				- Windows WAMP
+					- logs to C:/wamp/logs/php_error.log
+					- or access logs from the WAMP menu
+				- Apache
+					- configured in /etc/apache2/httpd.conf
+
+			Debugging and Troubleshooting
+				- echo value of the $variable;
+				- print_r($array) (print a readable array)				
+				- gettype($variable);
+				- var_dump($variable)
+					return value and type
+				- get_defined_vars(); (array of defined variables)
+				- debug_backtrace (); (show backtrace/stacktrace)
+				- 	no internal debugger
+
+			Third party tools
+				- Xdebug
+					- http://xdebug.org
+				-DBG
+					- http://www.php-debugger.com/dbg
+				FirePHP
+					- http://www.firephp/org		
 
 ====
 
 Revise
 
 1. loop inside a loop with continue - continue.php / lesson 045 towards the end
+2. Scope global and local -functions_scope.php / lesson 52
