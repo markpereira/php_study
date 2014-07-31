@@ -43,6 +43,10 @@ Continue
 
 	used inside the loop to skip the rest of the current iteration and go directly to the condition evaluation that starts the next iteration
 
+Function return values
+
+	As much as possible try to keep "echo" out of the function, and use "return" instead.
+
 
 ====
 
