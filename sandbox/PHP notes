@@ -1,17 +1,17 @@
 short open tags vs php tags?
 	standard tags to make it portable.
 
-Array
+=>> Array
 integer indexed collection of objects.
 
 Associative Array
 object indexed collection of objects.(index by label)
 key - value pair.
 
-Null and empty:
+=>> Null and empty:
 - 'Empty' is the leading cause of bugs in PHP code.
 
-Type Juggling and casting
+==> Type Juggling and casting
 
 	- String
 	- int, integer
@@ -26,28 +26,28 @@ Type Juggling and casting
 	=> using settype will allow the change of type.
 
 
-Constants
+==> Constants
 
 	- useful for saving data that's fixed. i.e root location of image files 
 
-Switch statements
+==> Switch statements
 	
 	- best used for compact logic. i.e. when you know there are a certain amount of things you need to list off, use switch statements.
 
-For loops, While loops and foreach loops.
+==> For loops, While loops and foreach loops.
 
 	- foreach loops are tailor made for arrays.
 	- use foreach loops for arrays before using other two.
 
-Continue
+==> Continue
 
 	used inside the loop to skip the rest of the current iteration and go directly to the condition evaluation that starts the next iteration
 
-Function return values
+==> Function return values
 
 	As much as possible try to keep "echo" statements out of the function, and use "return" values instead.
 
-Multiple return values.
+==> Multiple return values.
 	if you have two  return values, use an array to return both values.
 	use "list" to assign array values to variables
 
@@ -66,7 +66,7 @@ Multiple return values.
 //	
 	
 
-Common Problems & Troubleshooting
+==> Common Problems & Troubleshooting
 
 	No output at all
 		- try to access an HTML Page
@@ -146,6 +146,17 @@ Common Problems & Troubleshooting
 					- http://www.php-debugger.com/dbg
 				FirePHP
 					- http://www.firephp/org		
+
+==> Building Web pages with PHP
+			Getting info from users
+				- URL/Links GET
+				- Forms			POST
+				- Cookies		COOKIE
+
+==> Super Globals
+	
+				- $_GET
+
 
 ====
 
