@@ -17,9 +17,12 @@
 
 <?php 
 	// Often these are form values in $_POST
-	$menu_name = "Edit me";
+	$menu_name = "Today's Widget Trivia";
 	$position = 4;
 	$visible = 1;
+
+	// Escape all strings
+	$menu_name = mysqli_real_escape_string($connection, $menu_name);
 	// 2. Perform database query
 
 	//Classic query

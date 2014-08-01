@@ -365,6 +365,23 @@ key - value pair.
  		- mysqli_insert_id()
  			- $id = mysqli_insert_id($connection);
 
+==> SQL injection
+		- // please don'ttry this EVER!!
+		- $menu_name = " '); DROP TABLE subejects; '";
+		- this is the most single easiest hackers can get into your system by adding somehting like this to form field data.
+		- biggest problem to guard against.
+		- have to transfor and "escape" strings that we are to send to SQL. 
+		- Put a backslash before single quote.
+			- $menu_name = "Today\ 's Widget Trivia";
+			- set a function to do this for you automatically
+				- addslashes($string)
+				-Magic Quotes
+					- Automatically addslashes on GET, POST, COOKIE data
+					- Added in PHP 2, default in PHP3
+					- Removed in PHP 5.4
+			- USE THIS FOR STRINGS - mysqli_real_escape_string($db, $string)
+				- database sensitive.		
+			- Don't escape string twice.	
 
 
 ====
