@@ -221,6 +221,12 @@ key - value pair.
 		- be careful with the basic operators. < , <= , > , >= ...  a lot of bugs get created when these have been used incorrectly.
 		- && , || - rmember to use sound logic.	
 
+==> Displaying validation errors
+		- using an array key.
+			if (array_key_exists($errors, "name")) {
+				echo "<span class=\"error-field\">&lt;&lt;>/span>";
+			}
+			--> this will add a pointer to the specific error based on the value "name" or whatever it is.
 
 ====
 
