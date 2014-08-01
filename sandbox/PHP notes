@@ -158,6 +158,7 @@ key - value pair.
 				- $_GET (any get request will be added to an array within the GET super global)
 				- $_POST
 				- $_COOKIE
+				- $_SESSION
 
 ==> Encoding GET Values
 		urlencode vs rawurlencode
@@ -230,6 +231,7 @@ key - value pair.
 			--> this will add a pointer to the specific error based on the value "name" or whatever it is.
 
 ==> Cookies
+		- expires when you set.
 		- wrong way to unset a cookie
 				unset($_COOKIE["user_id"]);
 			- we have to tell the user's browser to change their 
@@ -238,6 +240,85 @@ key - value pair.
 			- setcookie($name, null);
 			- setcookie($name, $value, (time() -3600));	
 
+
+==> Sessions
+		- Pros
+			- More storage - can store more data than a cookie. A Cookie can store up to 4000 chars maximum
+			- Smaller request sizes. If it was a cookie it would be sending all 4000 chars with each request.
+			- Session is only sending session ID.
+			- Conceals the data values. you can only see the reference to the session id. All data is still stored on the server side.
+			- More secure, Less Hackable.
+
+		- Drawbacks	
+			- Slower to access - have to get session value out of the cookie, find the file in the file system, then read the data out of the file.
+			- Expire when browser is closed. (meant to be a single session)
+			- Session files accumulate (have a system in place to prune back any session files that haven't been accesses within X time) add this as part of your normal system maintenance.
+
+==> MYSQL Database
+	- mysql -u root -p
+		enter password
+	- types of commands for database:
+
+		-	SHOW DATABASES; 
+		-	CREATE DATABASE db_name; 
+		- USE db_name;
+		- DROP DATABASE db_name;
+		- GRANT ALL PRIVILEGES ON db_name.*
+			TO 'username'@'localhost' 
+			IDENTIFIED BY 'password';  -> give priveleges to specific database.
+		- SHOW GRANTS FOR 'username'@'localhost'; -> show priveleges.	
+
+	- types of commands to use on tables:	
+		- SHOW TABLES;
+		- CREATE TABLE table_name (
+			column_name1 definition,
+			column_name2 definition,
+			column_name3 definition,
+			options
+		);
+		- SHOW COLUMNS FROM table_name;
+		- DROP TABLE table_name;
+		- Example of creating tables in a database:
+			- mysql> CREATE TABLE subjects (
+			  -> id INT(11) NOT NULL AUTO_INCREMENT,
+			  -> menu_name VARCHAR(30) NOT NULL,
+			  -> position INT(3) NOT NULL,
+			  -> visible TINYINT(1) NOT NULL,
+			  -> PRIMARY KEY(id)
+			  -> );
+
+==>	CRUD
+		- SQL SELECT(read)
+			-	SELECT *
+				- FROM table
+				-	WHERE COLUMN1 = 'some_text'
+				- ORDER BY column1 ASC;
+
+		- SQL INSERT(create)
+			- INSERT INTO table (column1, column2, column3)
+				VALUES (val1, val2, val3);		  
+
+		- SQL UPDATE(update)
+			- UPDATE table
+				SET column1 = 'some_text'
+				WHERE id = 1;
+
+		- SQL	DELETE(delete)
+			- DELETE FROM table
+				WHERE id = 1;
+					or
+				WHERE table_name = "Kevin";
+
+		- Navigating through (some examples)
+
+			- SELECT * FROM subjects WHERE visible = 1;
+			- SELECT * FROM subjects WHERE visible = 1 ORDER BY position ASC;
+			- SELECT * FROM subjects WHERE visible = 1 ORDER BY position DESC;	
+			- mysql> INSERT INTO subjects (menu_name, position, visible)
+    		-> VALUES ('About Widget Corp', 1, 1);	
+    	- INSERT INTO subjects (menu_name, position, visible) VALUES ('Products',2, 1);
+    	- SELECT * FROM subjects WHERE id=2;	
+    	- SELECT menu_name, position FROM subjects WHERE visible = 1;
 ====
 
 Revise

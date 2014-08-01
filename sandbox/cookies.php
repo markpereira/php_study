@@ -5,6 +5,13 @@
 	$value = "hello";
 	$expire = time() + (60*60*24*7); // one week in seconds
 	setcookie($name, $value, $expire);
+
+	// setcookie($name);
+	// setcookie($name, null, $expire);	
+	// setcookie($name, $value, time() - 3600);
+
+	// ** Kevin's recommendation to unset cookie.	**
+	// setcookie($name, null, time() - 3600);	
 ?>
 <!DOCTYPE html>
 <html lang="en">
