@@ -381,8 +381,13 @@ key - value pair.
 					- Removed in PHP 5.4
 			- USE THIS FOR STRINGS - mysqli_real_escape_string($db, $string)
 				- database sensitive.		
-			- Don't escape string twice.	
+			- Don't escape string twice.
 
+ ==> Prepared Statements				
+ 		- Prepare statement once, reuse many times
+ 			- faster
+ 		- Seperate query from dynamic data
+ 			- prevents SQL injection
 
 ====
 
