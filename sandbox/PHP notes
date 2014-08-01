@@ -319,6 +319,42 @@ key - value pair.
     	- INSERT INTO subjects (menu_name, position, visible) VALUES ('Products',2, 1);
     	- SELECT * FROM subjects WHERE id=2;	
     	- SELECT menu_name, position FROM subjects WHERE visible = 1;
+
+
+ ==> Database API's in PHP 
+ 		- MYSQL API
+ 			- deprecated after PHP ver 5.5
+ 			- only offers Procedural interface.
+ 		- MYSQLi - improved
+ 			- allows procedural and object-oriented interface
+ 		- PDO - PHP Data Objects
+ 			- configuring PDO is simple - modifying a couple of lines of code in the php.ini
+ 			- good idea to use PDO if looking to use other database types. i.e. postgres
+ 			- does not offer procedural Interface, object-oriented interface only
+
+ 		-> 'Prepared Statements' is a feature you want enabled when using PHP.
+ 		-> choosing your api
+ 			http://php.net/manual/en/mysqlinfo.api.choosing.php	
+
+ ==> Database Interaction in Five steps:
+ 	1. Create a database connection
+ 	2. Perform database query
+ 	3. Use return data (if any)
+ 	4. Release returned data 
+ 	5. Close database connection
+
+ ==> mysqli connection info
+ 		- mysqli_connect()
+ 		- mysqli_connect_errno()
+ 		- mysqli_connect_error()
+ 		- my sqli_close()
+
+ ==> mysqli performing query of database:
+ 		- mysqli_query()
+ 		- mysqli_fetch_row()
+ 		- mysqli_free_result()		
+
+
 ====
 
 Revise
