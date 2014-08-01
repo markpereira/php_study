@@ -35,23 +35,25 @@
 		<title>Databases</title>
 	</head>
 	<body>
-
+		<ul>
 		<?php 
 		// 3. Use return data (if any)
-		while($row = mysqli_fetch_row($result)) {
-			// This is how we work with mysql result sets (because it's not a PHP array).
-			// Fetching the row increments the array pointer. Cannot use "foreach" here.
-			//output data from each row
-			var_dump($row);
-			echo "<hr />";
-		}
+			while($subject = mysqli_fetch_assoc($result)) {
+				// This is how we work with mysql result sets (because it's not a PHP array).
+				// Fetching the subject increments the array pointer. Cannot use "foreach" here.
+				//output data from each subject
 		?>
+			<li><?php echo $subject["menu_name"] . " (" . $subject["id"] .")"; ?></li>	
+		<?php
+			}
+		?>
+	</ul>
 
 		<?php 
 		// 4. Release returned data
 		mysqli_free_result($result);
 		?>
-		
+
 	</body>
 </html>		
 

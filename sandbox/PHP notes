@@ -351,8 +351,20 @@ key - value pair.
 
  ==> mysqli performing query of database:
  		- mysqli_query()
- 		- mysqli_fetch_row()
- 		- mysqli_free_result()		
+ 		- mysqli_fetch_row() >> BEST PERFORMANCE
+ 			- results are in a standard array
+ 			- Keys are integers
+ 		- mysqli_fetch_assoc >> SLIGHTLY LESS PERFORMANCE THAN ABOVE
+ 			- results are in an associative array
+ 			- Keys are columns
+ 		- mysqli_fetch_array >> Can make memory and data set a lot larger (best to use fetch_assoc)
+ 			- results in either or both types of arrays
+ 			- MYSQL_NUM, MYSQL_ASSOC, MYSQL_BOTH
+ 		- mysqli_fetch_object (when working with object orientated)	 	
+ 		- mysqli_free_result()
+ 		- mysqli_insert_id()
+ 			- $id = mysqli_insert_id($connection);
+
 
 
 ====
