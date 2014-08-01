@@ -157,6 +157,7 @@ key - value pair.
 	
 				- $_GET (any get request will be added to an array within the GET super global)
 				- $_POST
+				- $_COOKIE
 
 ==> Encoding GET Values
 		urlencode vs rawurlencode
@@ -227,6 +228,15 @@ key - value pair.
 				echo "<span class=\"error-field\">&lt;&lt;>/span>";
 			}
 			--> this will add a pointer to the specific error based on the value "name" or whatever it is.
+
+==> Cookies
+		- wrong way to unset a cookie
+				unset($_COOKIE["user_id"]);
+			- we have to tell the user's browser to change their 
+		-	Right ways
+			- setcookie($name);
+			- setcookie($name, null);
+			- setcookie($name, $value, (time() -3600));	
 
 ====
 
