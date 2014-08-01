@@ -46,10 +46,12 @@
 			echo "<hr />";
 		}
 		?>
+
 		<?php 
 		// 4. Release returned data
 		mysqli_free_result($result);
 		?>
+		
 	</body>
 </html>		
 
