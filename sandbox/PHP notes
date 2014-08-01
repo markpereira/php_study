@@ -209,6 +209,19 @@ key - value pair.
 				- ob_start() - has to come before any content.
 				- ob_flush()	
 
+==> Problems with validation logic.
+		- when PHP does a comparison, it does the type juggling for you.
+		- in order to compare two things that have different types.
+			- string vs null: converts null to " "
+			- boolean vs other: coverts other to boolean
+			- number vs other: converts other to number
+		- what is empty()
+			- "" , 0, "0", null, false, array()
+			- some developers create their own code of what their version of empty is, and use that.	
+		- be careful with the basic operators. < , <= , > , >= ...  a lot of bugs get created when these have been used incorrectly.
+		- && , || - rmember to use sound logic.	
+
+
 ====
 
 Revise

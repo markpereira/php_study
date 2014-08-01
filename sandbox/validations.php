@@ -7,8 +7,15 @@
 		<?php
 
 		// * presence
-		$value = "x";
-		if (!isset($value) || empty($value)) {
+		//value option 1
+		$value = trim("0");
+		if (!isset($value) || (empty($value) && !is_numeric($value))) {
+			echo "Validation failed. Nothing entered<br />";
+		}
+
+		//value option 2
+		$value = trim("0");
+		if (!isset($value) || $value === "") {
 			echo "Validation failed. Nothing entered<br />";
 		}
 
