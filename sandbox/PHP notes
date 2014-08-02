@@ -389,6 +389,11 @@ key - value pair.
  		- Seperate query from dynamic data
  			- prevents SQL injection
 
+ ==> CMS
+ 		- private web pages to manage the content of our public website
+ 		- public: veiws content only (read)
+ 		- admin: CRUD on system 			
+
 ====
 
 Revise
